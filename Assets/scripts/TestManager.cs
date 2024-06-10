@@ -11,12 +11,17 @@ public class TestManager : MonoBehaviour
     public AudioSource audioSource;
     public GameObject scorePanel;
     public TMP_Text scoreText;
-    public int[] clickTimes = new int[] { 2, 7, 13, 18, 22, 25, 37 };
-    public int maxScore= 7;
-    
-    
+    //public int[] clickTimes = new int[] { 2, 7, 13, 18, 22, 25, 37 };
+    public int maxScore= 8;
+    public int totalTestDuration = 45;
+    public AudioClip[] audioClips;
+
+
+    private List<float> clickTimes = new List<float>();
     private int score = 0;
     private bool testStarted = false;
+    private string passStatus = "failed";
+    private int misclicks = 0;
 
     public static TestManager Instance
     {
@@ -45,27 +50,98 @@ public class TestManager : MonoBehaviour
     {
        if (headset.GetComponent<InteractableObject>().isEquipped)
         {
-            audioSource.enabled = true;
-            audioSource.Play();
+            
+            //start the test
             testStarted = true;
-            StartCoroutine(CheckAudioEnd());
+
+            //generate the click times randomly
+            GenerateClickTimes();
+
+            //start a coroutine to play the audio
+            StartCoroutine(StartPlayback());
+
+            
+            
         } else
         {
+            //shouldn't reach here i think(?) but just in case
             audioSource.enabled = false;
             
         }
     }
-    IEnumerator CheckAudioEnd()
+    private IEnumerator StartPlayback()
     {
+        audioSource.enabled = true;
+
         
-        yield return new WaitWhile(() => audioSource.isPlaying);
+
+        foreach (float playTime in clickTimes)
+        {
+            
+            float delay = playTime - Time.time;
+
+            if (delay > 0)
+            {
+                yield return new WaitForSeconds(delay);
+            }
+            float minVolume = 0.3f;
+            float maxVolume = 0.7f;
+            audioSource.volume = Random.Range(minVolume, maxVolume);
+            //Debug.Log("Playing sound at: " + Time.time + " " + audioSource.volume);
+            int randomIndex = Random.Range(0, audioClips.Length);
+            audioSource.clip = audioClips[randomIndex];
+            audioSource.Play();
+            yield return new WaitForSeconds(audioSource.clip.length);
+        }
+        
         EndTest();
+    }
+
+    private void GenerateClickTimes()
+    {
+        this.clickTimes.Clear();
+        float startTime = Time.time;
+
+        //initial start time
+        float currentTime = Random.Range(2.0f, totalTestDuration - 2.0f);
+        this.clickTimes.Add(currentTime + startTime);
+
+        for (int i = 1; i < this.maxScore; i++)
+        {
+            //2 seconds gap between each sound
+            float nextTime = currentTime + Random.Range(2.0f, (totalTestDuration - currentTime) / (maxScore - i));
+
+           
+            if (nextTime > totalTestDuration - 2.0f)
+            {
+                break;
+            }
+
+            this.clickTimes.Add(nextTime + startTime);
+            currentTime = nextTime;
+        }
+
+        //fill the rest of the list with random times
+        while (clickTimes.Count < maxScore)
+        {
+            float remainingTime = totalTestDuration - currentTime - 2.0f;
+            float nextTime = currentTime + Random.Range(2.0f, remainingTime > 2.0f ? remainingTime : 2.0f);
+
+            this.clickTimes.Add(nextTime + startTime);
+            currentTime = nextTime;
+        }
+
+        clickTimes.Sort();
     }
 
     public void EndTest()
     {
+        if (score >= maxScore / 2)
+        {
+            this.passStatus = "passed";
+        }
         scorePanel.SetActive(true);
-        scoreText.text = "You have finished the test, well done!\r\n\r\n\r\nYour score is: " + score + "/7";
+        scoreText.text = "You have finished the test.\r\n\r\n\r\nYou have managed to identified the sound " + score + " times and misclicked " + misclicks + " times.\r\n\r\n\r\nYou have " + passStatus + " the test.\r\n\r\n\r\nPlease return to the door to proceed to the next station.";
         scoreText.ForceMeshUpdate();
     }
 
@@ -73,21 +149,33 @@ public class TestManager : MonoBehaviour
     {
 
         if (!testStarted) return; 
-        float currentTime = audioSource.time;
-        Debug.Log("Current Time: " + currentTime);
+        float currentTime = Time.time;
+        bool clickedInRange = false;
+        //Debug.Log("Current Time: " + currentTime);
 
 
-        foreach (int clickTime in this.clickTimes)
+        foreach (float clickTime in this.clickTimes)
         {
             
-            Debug.Log("Click Time: " + clickTime);
-            if (Mathf.Abs(clickTime - currentTime) < 0.5f)
+            //Debug.Log("Click Time: " + clickTime);
+            if (Mathf.Abs(clickTime - currentTime) < 0.6f)
             {
-                Debug.Log(clickTime-currentTime);
-                score++;
-                score = Mathf.Min(score, maxScore); 
+                //Debug.Log(clickTime-currentTime);
+                clickedInRange = true;
                 break;
-            }
+            } 
+            
+        }
+
+        if (clickedInRange)
+        {
+            score++;
+            score = Mathf.Min(score, maxScore);
+        }
+        else
+        {
+            
+            misclicks++;
         }
     }
 }

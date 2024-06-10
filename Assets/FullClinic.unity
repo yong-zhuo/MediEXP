@@ -295,7 +295,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31430
+  m_Name: pb_Mesh31408
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1655,15 +1655,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335344548}
-  m_LocalRotation: {x: -0, y: -0, z: -0.08952581, w: 0.9959845}
-  m_LocalPosition: {x: -2.4608526, y: 2.2528408, z: -0.13700008}
+  m_LocalRotation: {x: -0, y: -0, z: -0.02106457, w: 0.99977815}
+  m_LocalPosition: {x: -2.4593403, y: 2.2529445, z: -0.13700008}
   m_LocalScale: {x: 0.08, y: 0.01, z: 0.08}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1692691238}
   m_Father: {fileID: 1548733651}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.273}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.414}
 --- !u!136 &335344550
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1876,8 +1876,11 @@ MonoBehaviour:
   audioSource: {fileID: 927920584}
   scorePanel: {fileID: 1197432836}
   scoreText: {fileID: 1652522885}
-  clickTimes: 02000000070000000d00000012000000160000001900000025000000
-  maxScore: 7
+  maxScore: 8
+  totalTestDuration: 40
+  audioClips:
+  - {fileID: 8300000, guid: 615a12776cb0a8f41a0a885fed790373, type: 3}
+  - {fileID: 8300000, guid: 31934dbbaf02d834cb595d2b4e615638, type: 3}
 --- !u!4 &492396902
 Transform:
   m_ObjectHideFlags: 0
@@ -2670,7 +2673,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 55e71e6fe6c2d234a96da95585846833, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 615a12776cb0a8f41a0a885fed790373, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2962,7 +2965,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-10274
+  m_Name: pb_Mesh31426
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -3789,8 +3792,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1231799312788918987, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231799312788918987, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231799312788918987, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231799312788918987, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.822
+      value: 3.64
       objectReference: {fileID: 0}
     - target: {fileID: 1231799312788918987, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3798,7 +3813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1231799312788918987, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.196
+      value: 1.112
       objectReference: {fileID: 0}
     - target: {fileID: 1231799312788918987, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3889,6 +3904,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3899631047487101914, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
+      propertyPath: m_fontSize
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899631047487101914, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899631047487101914, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
       propertyPath: m_textAlignment
       value: 65535
       objectReference: {fileID: 0}
@@ -3898,11 +3921,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4114054031443894147, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
       propertyPath: m_text
-      value: You have finished the test!
+      value: Test Finished
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114054031443894147, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
+      propertyPath: m_fontSize
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114054031443894147, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4114054031443894147, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
       propertyPath: m_textAlignment
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114054031443894147, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4114054031443894147, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
       propertyPath: m_TextStyleHashCode
@@ -4440,8 +4475,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692691237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 2.1, z: 0.06}
-  m_LocalScale: {x: 0.5, y: 0.625, z: 0.5}
+  m_LocalPosition: {x: -0.21, y: 2.1, z: 0.0216}
+  m_LocalScale: {x: 0.432304, y: 0.625, z: 0.57675}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 335344549}
@@ -4874,7 +4909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65c9dd2f312b8d41b8849d58e1053fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alignmentType: 0
+  alignmentType: 1
   containerObject: {fileID: 0}
 --- !u!4 &1891318415
 Transform:
@@ -4888,6 +4923,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1197432837}
   - {fileID: 294649162}
   - {fileID: 160412976}
   - {fileID: 1905646115}
@@ -4906,7 +4942,6 @@ Transform:
   - {fileID: 1439083644}
   - {fileID: 1979770059}
   - {fileID: 1860041561}
-  - {fileID: 1197432837}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5080,8 +5115,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3899631047487101914, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
       propertyPath: m_text
-      value: In this station, an audio recording will be played for about 40 seconds.
-        You are required to press the button only when you heard a sharp pitch.
+      value: "In this station, we will be evaluating the sensitivity of your hearing. 
+        \n\nAn audio recording will be played for about 40 seconds. You are required
+        to press the button on the table only when you heard a sharp pitch.\n\nOnce
+        you are ready, please click on the headset to begin the test."
       objectReference: {fileID: 0}
     - target: {fileID: 3899631047487101914, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
       propertyPath: m_textAlignment
@@ -5090,6 +5127,10 @@ PrefabInstance:
     - target: {fileID: 3899631047487101914, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
       propertyPath: m_TextStyleHashCode
       value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114054031443894147, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
+      propertyPath: m_text
+      value: Welcome to the hearing(audiometry) test station!
       objectReference: {fileID: 0}
     - target: {fileID: 4114054031443894147, guid: a0ef6c45c87675f4abf9738395165413, type: 3}
       propertyPath: m_textAlignment
