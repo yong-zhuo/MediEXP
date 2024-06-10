@@ -65,7 +65,7 @@ public class TestManager : MonoBehaviour
     public void EndTest()
     {
         scorePanel.SetActive(true);
-        scoreText.text = "You have finished the test, well done!\r\n\r\n\r\nYour score is: " + score;
+        scoreText.text = "You have finished the test, well done!\r\n\r\n\r\nYour score is: " + score + "/7";
         scoreText.ForceMeshUpdate();
     }
 
