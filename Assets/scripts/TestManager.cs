@@ -11,6 +11,7 @@ public class TestManager : MonoBehaviour
     public AudioSource audioSource;
     public GameObject scorePanel;
     public TMP_Text scoreText;
+    public GameObject nextScenePanel;
     //public int[] clickTimes = new int[] { 2, 7, 13, 18, 22, 25, 37 };
     public int maxScore= 8;
     public int totalTestDuration = 45;
@@ -42,6 +43,7 @@ public class TestManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        nextScenePanel.SetActive(false);
         scorePanel.SetActive(false);
         audioSource.enabled = false;
     }
@@ -103,7 +105,7 @@ public class TestManager : MonoBehaviour
         float startTime = Time.time;
 
         //initial start time
-        float currentTime = Random.Range(2.0f, totalTestDuration - 2.0f);
+        float currentTime = Random.Range(2.0f, 5.0f);
         this.clickTimes.Add(currentTime + startTime);
 
         for (int i = 1; i < this.maxScore; i++)
@@ -143,6 +145,7 @@ public class TestManager : MonoBehaviour
         scorePanel.SetActive(true);
         scoreText.text = "You have finished the test.\r\n\r\n\r\nYou have managed to identified the sound " + score + " times and misclicked " + misclicks + " times.\r\n\r\n\r\nYou have " + passStatus + " the test.\r\n\r\n\r\nPlease return to the door to proceed to the next station.";
         scoreText.ForceMeshUpdate();
+        nextScenePanel.SetActive(true);
     }
 
     public void IncrementScore()
