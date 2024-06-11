@@ -15,13 +15,17 @@ public class MRI_UI_Manager : MonoBehaviour
     public bool onBed = false; // will be true when player lying on bed
     public Vector3 endPos;
     public float speed = 0.1f;
+    public GameObject startButton;
+    public GameObject exitButton;
+    public AudioSource[] audioLib;
 
     // Start is called before the first frame update
     void Start()
     {
         descriptionText.GetComponent<TextMeshPro>().text = textInfo[pageNumber - 1];
         // Hardcoded
-        endPos.Set(2.52399993f, -0.402999997f, 3.9690001f);
+        //endPos.Set(2.52399993f, -0.402999997f, 3.9690001f);
+        endPos.Set(0.125f, -0.5f, 3.5f);
     }
 
     // Update is called once per frame
@@ -47,21 +51,27 @@ public class MRI_UI_Manager : MonoBehaviour
             simulationPanel.SetActive(true);
 
             // Maybe can lerp ?
-            vrCamera.transform.position = new Vector3(2.52399993f, -0.402999878f, 2.50900006f);
+            vrCamera.transform.position = new Vector3(0.125f, -0.4f, 2.0f);
             vrCamera.transform.Rotate(-90.0f, -180.0f, 0.0f);
             onBed = true;
+            audioLib[1].Play();
         }
     }
 
-
     public void PrevPage()
     {
-
         if (pageNumber > 1)
         {
             pageNumber--;
             descriptionText.GetComponent<TextMeshPro>().text = textInfo[pageNumber - 1];
         }
-
     }
+
+    public void StartSimulation()
+    {
+        audioLib[0].Play();
+        startButton.SetActive(false);
+        exitButton.SetActive(true);
+    }
+
 }
