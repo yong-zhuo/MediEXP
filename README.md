@@ -1,7 +1,7 @@
 
 # MediEXP
 
-Team Name: MatchTea
+Team Name: MatchaTea
 
 Members: Raphael, Yong Zhuo, Teck Meng, Jun Jie
 
