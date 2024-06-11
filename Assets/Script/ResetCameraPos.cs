@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-using Keyboard;
 using UnityEngine;
 
 public class Click : MonoBehaviour 
@@ -9,12 +8,18 @@ public class Click : MonoBehaviour
 
     // Start is called before the first frame update
     public GameObject kamera;
-    public AnswerButton answerButton;
+    public SubmitButton submitButton;
     public GameSpeech gameSpeech;
+    public TriageSceneHandler handler;
+
+    public Questionnaire questionnaire;
     public void ToggleObject() { 
         kamera.transform.position = Vector3.zero;
-        answerButton.OffAudio();
+        submitButton.OffAudio();
+        handler.OffAudio();
         gameSpeech.OffAudio();
+        submitButton.Reset();
+        questionnaire.ResetChecks();
         GetComponents<AudioSource>()[0].Play();
     }
 
