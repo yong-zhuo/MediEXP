@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1837588, g: 0.22826518, b: 0.29945856, a: 1}
+  m_IndirectSpecularColor: {r: 0.18375856, g: 0.22826484, b: 0.29945773, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1868,11 +1868,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 492396900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a125164572a10774091b7abf447d4e41, type: 3}
+  m_Script: {fileID: 11500000, guid: cf932e7edae79174d808274c413ec479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   headset: {fileID: 1161444636}
-  clicker: {fileID: 335344548}
+  clicker: {fileID: 1548733650}
   audioSource: {fileID: 927920584}
   scorePanel: {fileID: 1197432836}
   scoreText: {fileID: 1652522885}
@@ -4874,7 +4874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65c9dd2f312b8d41b8849d58e1053fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alignmentType: 0
+  alignmentType: 1
   containerObject: {fileID: 0}
 --- !u!4 &1891318415
 Transform:
