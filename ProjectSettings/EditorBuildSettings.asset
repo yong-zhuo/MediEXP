@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MRI.unity
-    guid: b84adaceebb92f24ca98d3234e4a28f0
-  - enabled: 1
-    path: Assets/Scenes/EYE.unity
-    guid: a062cdad143fb5745833d063c96c639e
+    path: Assets/Scenes/TriageScene.unity
+    guid: 6b6dbc4132f5347419598c7720f8aa3a
   - enabled: 1
     path: Assets/Scenes/FullClinic.unity
     guid: 41f63b879297ad848990efea0925c1b3
   - enabled: 1
-    path: Assets/Scenes/TriageScene.unity
-    guid: 6b6dbc4132f5347419598c7720f8aa3a
+    path: Assets/Scenes/EYE.unity
+    guid: a062cdad143fb5745833d063c96c639e
+  - enabled: 1
+    path: Assets/Scenes/MRI.unity
+    guid: b84adaceebb92f24ca98d3234e4a28f0
   m_configObjects:
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: ce39f8d6b87af2146a26925056834fb3, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4ed5b4654f405484b8e7ea846cb21b4a, type: 2}

@@ -3817,76 +3817,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.08053346, y: 0.08714453, z: 0.041617006}
   m_Center: {x: 0.001602916, y: 0.0051388354, z: 0.00000233762}
---- !u!1001 &1267067730
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1891318415}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.19
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.48
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.55999994
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071066
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071066
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.0005875591
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.00058755133
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.095
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: be584f1ece6830a40868533aa9d6981f, type: 2}
-    - target: {fileID: 919132149155446097, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-      propertyPath: m_Name
-      value: uploads_files_4495742_MedicineWallCupboard
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
---- !u!4 &1267067731 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5752296ba7f42ac499ff6a388e621616, type: 3}
-  m_PrefabInstance: {fileID: 1267067730}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1280380953
 GameObject:
   m_ObjectHideFlags: 0
@@ -5046,6 +4976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair2
       objectReference: {fileID: 0}
+    - target: {fileID: 2892393900813446783, guid: 1147a536ebc1c4d418ffc4b0220ff03e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5209,7 +5143,6 @@ Transform:
   - {fileID: 160412976}
   - {fileID: 1905646115}
   - {fileID: 1284600421}
-  - {fileID: 1267067731}
   - {fileID: 2091510223}
   - {fileID: 1424106651}
   - {fileID: 1280380954}
