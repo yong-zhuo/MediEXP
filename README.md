@@ -33,6 +33,9 @@ mri model - https://sketchfab.com/3d-models/sci-fi-mri-0316c6e93325481db2de156ad
 JJ
 
 TM
+Plant - https://assetstore.unity.com/packages/3d/vegetation/flowers/ornamental-flower-set-11920
+Man - https://assetstore.unity.com/packages/3d/characters/humanoids/humans/bodyguards-31711
+Furniture - https://assetstore.unity.com/packages/3d/pbr-georgian-desk-and-chair-90192
 
 YZ
 
@@ -46,5 +49,7 @@ MRI SOUND - https://www.youtube.com/watch?v=tHdIv0sUJRI&t=1s&ab_channel=MRIPETCT
 JJ
 
 TM
+Text to speech - https://ttsmaker.com/
+
 
 YZ
