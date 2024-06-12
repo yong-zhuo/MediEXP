@@ -43,6 +43,11 @@ Computer - https://sketchfab.com/3d-models/computer-monitor-d6c02c88cf574f9db8be
 
 Chair - https://assetstore.unity.com/packages/3d/props/3d-game-asset-table-chair-sets-199726
 
+Ishihara 1: https://en.wikipedia.org/wiki/Ishihara_test
+
+Ishihara 2: https://www.colorlitelens.com/ishihara-test.html
+
+Ishihara 3: https://www.colorlitelens.com/ishihara-test.html
 
 
 ## Audio Assets
