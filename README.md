@@ -54,12 +54,12 @@ Chair - https://assetstore.unity.com/packages/3d/props/3d-game-asset-table-chair
 
 Raphael
 MRI BED MOVE - https://www.youtube.com/watch?v=Rr31ZcI_ECE&ab_channel=Aria
-MRI SOUND - https://www.youtube.com/watch?v=tHdIv0sUJRI&t=1s&ab_channel=MRIPETCTSOURCE
 
-JJ
+MRI SOUND - https://www.youtube.com/watch?v=tHdIv0sUJRI&t=1s&ab_channel=MRIPETCTSOURCE
 
 TM
 Text to speech - https://ttsmaker.com/
+
 BGM - https://assetstore.unity.com/packages/audio/music/lofi-world-vol-1-7-free-music-tracks-214014
 
 
