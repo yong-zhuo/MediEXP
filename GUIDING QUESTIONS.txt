@@ -1,0 +1,13 @@
+Guiding Questions from workshop
+
+10 QN Immersive Media Proj (AR, VR, MR)
+1. What is ur est budget
+2. What is the use case/ What do u want to achieve
+3. How long is a session of this VR project going to be used for
+4. Are the users going to be seated or walking abt while going thru the VR proj
+5. Are you going to have a dedicated room for this VR proj
+6. Do u need the users to interact (in any form) with the VR proj
+7. How high detailed or definition do you need the 3D models to be
+8. Is this project intended for a solo user or for a group of user
+9. Is this project going to be used for a short term period (like a booth) or intended to be used over a long term period
+10. 
