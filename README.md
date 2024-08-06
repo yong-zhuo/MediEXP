@@ -23,7 +23,6 @@ The Unity Editor is required. Download it from Unity3d.com/get-unity/download.
  - Open the Unity Project  in Unity Version **2021.3.0f1** or higher.
  - Click on File -> Build Settings -> Run Device(Select your device) -> Build and Run
 
-REMOVE THE NAMES WHEN SUBMITTING, ONLY FOR ORGANISING
 
 ## Art Assets 
 
